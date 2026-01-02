@@ -124,7 +124,7 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 
 | Course Type | Percentage | Follow-up Duration | Reference |
 |-------------|------------|-------------------|-----------|
-| Monophasic | 20-80% | Variable | Multiple |
+| Monophasic | 20-80% | Variable | [2](https://pubmed.ncbi.nlm.nih.gov/37789888/), [19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/), [20](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/) |
 | Relapsing | 27-72% | Varies by FU length | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | Relapsing (short FU 6-24 mo) | 47% | 6-24 months | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | Relapsing (long FU >5 years) | 72% | >5 years | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
@@ -137,7 +137,7 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 | Time to first relapse (pediatric) | 6 months | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | Time to first relapse (adult) | 17 months | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | Early relapse (<3 months) | 34.9% of relapsing patients | [PMID: 39778568](https://pubmed.ncbi.nlm.nih.gov/39778568/) |
-| Median time to first relapse | 9.5-13.7 months | Multiple studies |
+| Median time to first relapse | 9.5-13.7 months | [1](https://pubmed.ncbi.nlm.nih.gov/39778568/), [19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/), [27](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
 
 ### 4.3 Relapse Phenotype Patterns
 
@@ -146,7 +146,7 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 | Phenotype evolution | Variable clinical presentations at relapse | [PMC10187731](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | Most common relapse phenotype | Optic neuritis | [PMID: 39778568](https://pubmed.ncbi.nlm.nih.gov/39778568/) |
 | ON as relapse predictor | OR 5.175 (95% CI 1.286-20.824) | [PMC10277863](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
-| Same phenotype recurrence | Common but not universal | Multiple |
+| Same phenotype recurrence | Common but not universal | [1](https://pubmed.ncbi.nlm.nih.gov/39778568/), [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 
 ### 4.4 Late and Ultra-Late Relapses
 
@@ -255,8 +255,8 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 
 | Serostatus | Relapse Risk | Reference |
 |------------|--------------|-----------|
-| Persistent seropositivity | 2-10x higher relapse risk | Multiple |
-| Seroconversion to negative | Lower relapse risk | Multiple |
+| Persistent seropositivity | 2-10x higher relapse risk | [5](https://pubmed.ncbi.nlm.nih.gov/36446614/), [25](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/), [27](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
+| Seroconversion to negative | Lower relapse risk | [5](https://pubmed.ncbi.nlm.nih.gov/36446614/), [25](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/), [27](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
 | High titer persistence | Associated with relapse | [PMC10338689](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/) |
 
 ### 7.2 Titer Dynamics
@@ -272,7 +272,7 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 | Parameter | Value | Reference |
 |-----------|-------|-----------|
 | Median duration of persistence | 6 months (IQR 3-6, range 2-36) | [PMC10277863](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
-| Patients remaining seropositive | >50% | Multiple |
+| Patients remaining seropositive | >50% | [25](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/), [26](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/), [27](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
 | Higher titer in patients with sequelae | Median 1:100 vs 1:32 | [PMC10277863](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/) |
 
 ---
@@ -415,18 +415,18 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 | Feature | MOGAD | MS | AQP4-NMOSD | Reference |
 |---------|-------|-----|------------|-----------|
 | **Epidemiology** | | | | |
-| Female predominance | No | Yes | Yes | Multiple |
-| Peak pediatric age | <11 years | Adolescence | Variable | Multiple |
+| Female predominance | No | Yes | Yes | [2](https://pubmed.ncbi.nlm.nih.gov/37789888/), [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [26](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/) |
+| Peak pediatric age | <11 years | Adolescence | Variable | [2](https://pubmed.ncbi.nlm.nih.gov/37789888/), [7](https://pubmed.ncbi.nlm.nih.gov/37342342/), [19](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/) |
 | **Clinical** | | | | |
-| ADEM phenotype | Common (<11y) | Rare | Rare | Multiple |
-| Bilateral ON | Common | Rare | Common | Multiple |
+| ADEM phenotype | Common (<11y) | Rare | Rare | [2](https://pubmed.ncbi.nlm.nih.gov/37789888/), [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [24](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/) |
+| Bilateral ON | Common | Rare | Common | [9](https://pubmed.ncbi.nlm.nih.gov/38217965/), [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [26](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/) |
 | Chiasmal involvement | Less common | Rare | Common | [PMID: 38783085](https://pubmed.ncbi.nlm.nih.gov/38783085/) |
 | **Laboratory** | | | | |
 | OCB positive | 6-17% | >90% | 10-16% | [PMC6469662](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/) |
-| Specific antibody | MOG-IgG | None | AQP4-IgG | Multiple |
+| Specific antibody | MOG-IgG | None | AQP4-IgG | [3](https://pubmed.ncbi.nlm.nih.gov/38870448/), [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [26](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/) |
 | **MRI** | | | | |
-| Lesion pattern | Large, fluffy | Small, ovoid | LETM, area postrema | Multiple |
-| Dawson fingers | Absent | Present | Absent | Multiple |
+| Lesion pattern | Large, fluffy | Small, ovoid | LETM, area postrema | [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [23](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/), [24](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/) |
+| Dawson fingers | Absent | Present | Absent | [13](https://pubmed.ncbi.nlm.nih.gov/31582425/), [23](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/), [26](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/) |
 | H-sign in cord | Present | Absent | Absent | [PMID: 37060644](https://pubmed.ncbi.nlm.nih.gov/37060644/) |
 | **Prognosis** | | | | |
 | Long-term disability | Low | Moderate | High | [JAMA Neurol 2020](https://jamanetwork.com/journals/jamaneurology/fullarticle/2770029) |
