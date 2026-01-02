@@ -1,8 +1,15 @@
 # Pediatric MOGAD Clinical Course Review
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://ykshim2013.github.io/pediatric-mogad-review/)
 
 A comprehensive, evidence-based systematic review of pediatric Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) clinical course, compiled from SCI-indexed journals with verified PMIDs.
+
+## Quick Access
+
+| Web Version | QR Code |
+|-------------|---------|
+| **[View Interactive Page](https://ykshim2013.github.io/pediatric-mogad-review/)** | ![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://ykshim2013.github.io/pediatric-mogad-review/) |
 
 ## Overview
 
