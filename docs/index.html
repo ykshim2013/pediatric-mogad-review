@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pediatric MOGAD Clinical Course Review</title>
+    <title>Comprehensive Evidence-Based Review of Pediatric MOGAD Clinical Course</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-            --success: #10b981;
-            --warning: #f59e0b;
+            --primary: #0969da;
+            --primary-dark: #0550ae;
+            --bg: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --text: #1f2328;
+            --text-light: #656d76;
+            --border: #d0d7de;
+            --link: #0969da;
+            --code-bg: #f6f8fa;
         }
 
         * {
@@ -24,866 +24,940 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: var(--bg);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
             color: var(--text);
-            line-height: 1.6;
+            background: var(--bg);
+            max-width: 1012px;
+            margin: 0 auto;
+            padding: 32px;
         }
 
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3em;
+            margin-bottom: 16px;
+            font-weight: 600;
         }
 
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
         }
 
-        .header p {
-            opacity: 0.9;
-            font-size: 1.1rem;
+        h3 {
+            font-size: 1.25em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+
+        li {
+            margin-bottom: 4px;
+        }
+
+        hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: var(--border);
+            border: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+            display: block;
+            overflow-x: auto;
+        }
+
+        th, td {
+            padding: 6px 13px;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            font-weight: 600;
+            background-color: var(--bg-secondary);
+        }
+
+        tr:nth-child(2n) {
+            background-color: var(--bg-secondary);
+        }
+
+        .toc {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .toc h2 {
+            border-bottom: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        .toc ol {
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1em;
+            margin-bottom: 24px;
         }
 
         .badge {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.875rem;
-            margin-top: 1rem;
+            margin-bottom: 16px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid var(--border);
-        }
-
-        .card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .stat {
+        .qr-section {
             text-align: center;
-            padding: 1rem;
-            background: var(--bg);
-            border-radius: 8px;
-        }
-
-        .stat-value {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background: var(--bg);
-            font-weight: 600;
-            color: var(--text-light);
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .highlight {
-            background: #dbeafe;
-            color: var(--primary-dark);
-            padding: 0.125rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 0.5rem;
-        }
-
-        .toc {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
+            padding: 24px;
+            background: var(--bg-secondary);
             border: 1px solid var(--border);
-        }
-
-        .toc h3 {
-            margin-bottom: 1rem;
-        }
-
-        .toc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.5rem;
-        }
-
-        .toc a {
-            color: var(--primary);
-            text-decoration: none;
-            padding: 0.5rem;
             border-radius: 6px;
-            display: block;
-            transition: background 0.2s;
+            margin: 24px 0;
         }
 
-        .toc a:hover {
-            background: var(--bg);
-        }
-
-        .phenotype-chart {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .phenotype-bar {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .phenotype-label {
-            width: 120px;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .phenotype-track {
-            flex: 1;
-            height: 24px;
-            background: var(--bg);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .phenotype-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary) 0%, #60a5fa 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 0.5rem;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0.5rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--border);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 1.5rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -1.65rem;
-            top: 0.25rem;
-            width: 12px;
-            height: 12px;
-            background: var(--primary);
-            border-radius: 50%;
-            border: 2px solid var(--card-bg);
-        }
-
-        .timeline-title {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .timeline-desc {
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .footer {
-            background: var(--text);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .footer a {
-            color: #93c5fd;
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 16px auto;
         }
 
         .btn {
             display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 500;
-            transition: background 0.2s;
-            margin: 0.5rem;
+            margin: 4px;
         }
 
         .btn:hover {
             background: var(--primary-dark);
+            text-decoration: none;
         }
 
         .btn-outline {
             background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            border: 1px solid var(--border);
+            color: var(--text);
         }
 
         .btn-outline:hover {
-            background: var(--primary);
-            color: white;
+            background: var(--bg-secondary);
         }
 
-        .qr-section {
-            text-align: center;
-            padding: 2rem;
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .qr-code {
-            width: 150px;
-            height: 150px;
-            margin: 1rem auto;
-        }
-
-        .references-list {
-            font-size: 0.85rem;
+        footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
             color: var(--text-light);
-        }
-
-        .references-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 0.5rem;
+            font-size: 0.875rem;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.75rem;
+            body {
+                padding: 16px;
             }
 
-            .stat-grid {
-                grid-template-columns: 1fr;
+            table {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Pediatric MOGAD Clinical Course Review</h1>
-        <p>Comprehensive Evidence-Based Systematic Review</p>
-        <span class="badge">30+ SCI-Indexed References with PMIDs</span>
-    </header>
+    <h1>Comprehensive Evidence-Based Review of Pediatric MOGAD Clinical Course</h1>
+    <p class="subtitle">A Systematic Literature Review Based on SCI-Indexed Journals</p>
+    <span class="badge">30+ References with PMIDs</span>
 
-    <div class="container">
-        <div class="toc">
-            <h3>Quick Navigation</h3>
-            <div class="toc-grid">
-                <a href="#overview">Overview</a>
-                <a href="#epidemiology">Epidemiology</a>
-                <a href="#phenotypes">Clinical Phenotypes</a>
-                <a href="#disease-course">Disease Course</a>
-                <a href="#treatment">Treatment</a>
-                <a href="#outcomes">Outcomes</a>
-                <a href="#differential">Differential Diagnosis</a>
-                <a href="#references">References</a>
-            </div>
-        </div>
+    <hr>
 
-        <section id="overview">
-            <h2 class="section-title">Key Statistics at a Glance</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="stat-grid">
-                        <div class="stat">
-                            <div class="stat-value">1.3-2.5</div>
-                            <div class="stat-label">per 100,000 Prevalence</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">30-50%</div>
-                            <div class="stat-label">Pediatric Cases</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">6-8y</div>
-                            <div class="stat-label">Mean Onset Age</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-value">>95%</div>
-                            <div class="stat-label">Visual Recovery</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>What is MOGAD?</h3>
-                    <p>Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an autoimmune inflammatory demyelinating disorder of the central nervous system, distinct from MS and AQP4-NMOSD.</p>
-                    <br>
-                    <p><strong>Key Features:</strong></p>
-                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                        <li>Age-dependent clinical phenotypes</li>
-                        <li>Generally favorable long-term prognosis</li>
-                        <li>High response to immunotherapy</li>
-                        <li>Variable disease course</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="epidemiology">
-            <h2 class="section-title">Epidemiology</h2>
-            <div class="card">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Parameter</th>
-                            <th>Value</th>
-                            <th>Reference</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Overall Prevalence</td>
-                            <td><span class="highlight">1.3-2.5 per 100,000</span></td>
-                            <td>PMID: 37789888</td>
-                        </tr>
-                        <tr>
-                            <td>Annual Incidence</td>
-                            <td>3.4-4.8 per million</td>
-                            <td>PMID: 37789888</td>
-                        </tr>
-                        <tr>
-                            <td>Pediatric Proportion</td>
-                            <td><span class="highlight">30-50%</span></td>
-                            <td>PMID: 37789888</td>
-                        </tr>
-                        <tr>
-                            <td>Sex Distribution</td>
-                            <td>No female preponderance</td>
-                            <td>Multiple studies</td>
-                        </tr>
-                        <tr>
-                            <td>Median Onset Age</td>
-                            <td>6-8 years</td>
-                            <td>PMID: 37342342</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="phenotypes">
-            <h2 class="section-title">Clinical Phenotypes by Age</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Phenotype Distribution</h3>
-                    <div class="phenotype-chart">
-                        <div class="phenotype-bar">
-                            <span class="phenotype-label">ADEM (<5y)</span>
-                            <div class="phenotype-track">
-                                <div class="phenotype-fill" style="width: 81%;">81%</div>
-                            </div>
-                        </div>
-                        <div class="phenotype-bar">
-                            <span class="phenotype-label">ADEM (<11y)</span>
-                            <div class="phenotype-track">
-                                <div class="phenotype-fill" style="width: 52%;">38-66%</div>
-                            </div>
-                        </div>
-                        <div class="phenotype-bar">
-                            <span class="phenotype-label">ON (>11y)</span>
-                            <div class="phenotype-track">
-                                <div class="phenotype-fill" style="width: 58%;">58%</div>
-                            </div>
-                        </div>
-                        <div class="phenotype-bar">
-                            <span class="phenotype-label">TM</span>
-                            <div class="phenotype-track">
-                                <div class="phenotype-fill" style="width: 26%;">1-26%</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Age-Dependent Patterns</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Age Group</th>
-                                <th>Most Common</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><5 years</td>
-                                <td><span class="highlight">ADEM (81%)</span></td>
-                            </tr>
-                            <tr>
-                                <td><11 years</td>
-                                <td>ADEM (38-66%)</td>
-                            </tr>
-                            <tr>
-                                <td>>11 years</td>
-                                <td><span class="highlight">ON (58%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>Adolescents</td>
-                                <td>ON, TM (similar to adults)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="disease-course">
-            <h2 class="section-title">Disease Course & Relapse Patterns</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Disease Course Distribution</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Course Type</th>
-                                <th>Percentage</th>
-                                <th>Follow-up</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Monophasic</td>
-                                <td>20-80%</td>
-                                <td>Variable</td>
-                            </tr>
-                            <tr>
-                                <td>Relapsing (short FU)</td>
-                                <td>47%</td>
-                                <td>6-24 months</td>
-                            </tr>
-                            <tr>
-                                <td>Relapsing (long FU)</td>
-                                <td><span class="highlight">72%</span></td>
-                                <td>>5 years</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Relapse Timeline</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-title">Early Relapse (<3 months)</div>
-                            <div class="timeline-desc">34.9% of relapsing patients (PMID: 39778568)</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-title">First Relapse (Pediatric)</div>
-                            <div class="timeline-desc">Median 6 months (vs 17 months in adults)</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-title">Late Relapse</div>
-                            <div class="timeline-desc">>2 years - unpredictable timing</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-title">Ultra-Late Relapse</div>
-                            <div class="timeline-desc">>5 years - requires extended follow-up</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="treatment">
-            <h2 class="section-title">Treatment Recommendations</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Acute Phase</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Treatment</th>
-                                <th>Use</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>IV Methylprednisolone</td>
-                                <td><span class="highlight">First-line</span></td>
-                            </tr>
-                            <tr>
-                                <td>IVIG</td>
-                                <td>Second-line/add-on</td>
-                            </tr>
-                            <tr>
-                                <td>Plasma Exchange</td>
-                                <td>Severe/refractory cases</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Key Evidence: Early Treatment Impact</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Factor</th>
-                                <th>Effect</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Immunotherapy <7 days</td>
-                                <td><span class="highlight">6.7x reduced relapse risk</span></td>
-                            </tr>
-                            <tr>
-                                <td>Steroid taper ≥5 weeks</td>
-                                <td><span class="highlight">6.7x reduced relapse risk</span></td>
-                            </tr>
-                            <tr>
-                                <td>Monthly IVIG</td>
-                                <td>ARR: 2.16 → 0.51</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.5rem;">Reference: PMID: 36446614</p>
-                </div>
-
-                <div class="card">
-                    <h3>Maintenance Therapy Options</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Treatment</th>
-                                <th>Pediatric Preference</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Monthly IVIG</td>
-                                <td><span class="highlight">First choice (45.5%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>Rituximab</td>
-                                <td>52.5-70% relapse-free at 12mo</td>
-                            </tr>
-                            <tr>
-                                <td>Mycophenolate mofetil</td>
-                                <td>Reduces ARR significantly</td>
-                            </tr>
-                            <tr>
-                                <td>Azathioprine</td>
-                                <td>Less preferred in children</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Steroid Taper Protocol</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Parameter</th>
-                                <th>Recommendation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Minimum Duration</td>
-                                <td><span class="highlight">≥5 weeks</span></td>
-                            </tr>
-                            <tr>
-                                <td>Suggested Maximum</td>
-                                <td>3 months</td>
-                            </tr>
-                            <tr>
-                                <td>Optimal Pediatric Dose</td>
-                                <td>0.16 mg/kg/day prednisone</td>
-                            </tr>
-                            <tr>
-                                <td>Risk Reduction</td>
-                                <td>88% with optimal protocol</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="outcomes">
-            <h2 class="section-title">Long-term Outcomes</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>MOGAD vs AQP4-NMOSD Comparison</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Outcome</th>
-                                <th>MOGAD</th>
-                                <th>AQP4-NMOSD</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>EDSS ≥6 at long-term FU</td>
-                                <td><span class="highlight">7%</span></td>
-                                <td>30%</td>
-                            </tr>
-                            <tr>
-                                <td>Unilateral Blindness</td>
-                                <td><span class="highlight">7%</span></td>
-                                <td>65%</td>
-                            </tr>
-                            <tr>
-                                <td>Secondary Progression</td>
-                                <td>No</td>
-                                <td>No</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.5rem;">Reference: JAMA Neurol 2020</p>
-                </div>
-
-                <div class="card">
-                    <h3>Prognostic Factors</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="color: var(--success);">Favorable</th>
-                                <th style="color: var(--warning);">Unfavorable</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Optic nerve involvement</td>
-                                <td>Spinal cord involvement</td>
-                            </tr>
-                            <tr>
-                                <td>Early immunotherapy (<7d)</td>
-                                <td>MDEM phenotype</td>
-                            </tr>
-                            <tr>
-                                <td>Longer steroid taper</td>
-                                <td>Persistent seropositivity</td>
-                            </tr>
-                            <tr>
-                                <td>Seroconversion to negative</td>
-                                <td>High MOG-Ab titer</td>
-                            </tr>
-                            <tr>
-                                <td>Monophasic course</td>
-                                <td>Increased opening pressure</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="card">
-                    <h3>Cognitive Outcomes</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Finding</th>
-                                <th>Rate</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cognitive problems (overall)</td>
-                                <td>10-50%</td>
-                            </tr>
-                            <tr>
-                                <td>Cognitive problems (relapsing)</td>
-                                <td>20%</td>
-                            </tr>
-                            <tr>
-                                <td>Cognitive problems (MDEM)</td>
-                                <td><span class="highlight">50%</span></td>
-                            </tr>
-                            <tr>
-                                <td>Academic intervention needed</td>
-                                <td>39.5%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="differential">
-            <h2 class="section-title">Differential Diagnosis: MOGAD vs MS vs NMOSD</h2>
-            <div class="card">
-                <div style="overflow-x: auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>MOGAD</th>
-                                <th>MS</th>
-                                <th>AQP4-NMOSD</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Female predominance</strong></td>
-                                <td>No</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Peak pediatric age</strong></td>
-                                <td><11 years</td>
-                                <td>Adolescence</td>
-                                <td>Variable</td>
-                            </tr>
-                            <tr>
-                                <td><strong>ADEM phenotype</strong></td>
-                                <td><span class="highlight">Common</span></td>
-                                <td>Rare</td>
-                                <td>Rare</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Bilateral ON</strong></td>
-                                <td><span class="highlight">Common</span></td>
-                                <td>Rare</td>
-                                <td>Common</td>
-                            </tr>
-                            <tr>
-                                <td><strong>OCB positive</strong></td>
-                                <td>6-17%</td>
-                                <td><span class="highlight">>90%</span></td>
-                                <td>10-16%</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Specific antibody</strong></td>
-                                <td>MOG-IgG</td>
-                                <td>None</td>
-                                <td>AQP4-IgG</td>
-                            </tr>
-                            <tr>
-                                <td><strong>H-sign in cord</strong></td>
-                                <td><span class="highlight">Present</span></td>
-                                <td>Absent</td>
-                                <td>Absent</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Long-term disability</strong></td>
-                                <td><span class="highlight">Low</span></td>
-                                <td>Moderate</td>
-                                <td>High</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section id="references">
-            <h2 class="section-title">Key References</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Primary Literature (Selected PMIDs)</h3>
-                    <ol class="references-list" style="margin-left: 1rem;">
-                        <li><strong>PMID: 39778568</strong> - Phenotype of Relapsing MOGAD in Children. J Clin Neurol. 2025</li>
-                        <li><strong>PMID: 37789888</strong> - Epidemiology of MOGAD worldwide. Front Neurol. 2023</li>
-                        <li><strong>PMID: 36446614</strong> - Early Immunotherapy in Pediatric MOGAD. Neurol Neuroimmunol. 2023</li>
-                        <li><strong>PMID: 38744459</strong> - Corticosteroid dosage and relapse. J Neurol Neurosurg Psychiatry. 2024</li>
-                        <li><strong>PMID: 37060644</strong> - MOG Antibody-Associated Myelitis in Children. Neurology. 2023</li>
-                        <li><strong>PMID: 38217965</strong> - Visual outcomes in pediatric MOGAD. J AAPOS. 2024</li>
-                        <li><strong>PMID: 32629363</strong> - Rituximab treatment study. Neurol Neuroimmunol. 2020</li>
-                        <li><strong>PMID: 35183817</strong> - Cognitive function in pediatric MOGAD. Mult Scler Relat Disord. 2022</li>
-                    </ol>
-                </div>
-
-                <div class="card qr-section">
-                    <h3>Access Full Review</h3>
-                    <p>Scan QR code to access this page</p>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ykshim2013.github.io/pediatric-mogad-review/" alt="QR Code" class="qr-code">
-                    <p style="font-size: 0.875rem; color: var(--text-light); margin-top: 1rem;">
-                        <a href="https://ykshim2013.github.io/pediatric-mogad-review/">https://ykshim2013.github.io/pediatric-mogad-review/</a>
-                    </p>
-                    <div style="margin-top: 1.5rem;">
-                        <a href="https://github.com/ykshim2013/pediatric-mogad-review" class="btn">View on GitHub</a>
-                        <a href="https://github.com/ykshim2013/pediatric-mogad-review/blob/main/Comprehensive_Pediatric_MOGAD_Clinical_Course_Review.md" class="btn btn-outline">Full Document</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#epidemiology">Epidemiology</a></li>
+            <li><a href="#clinical-phenotypes">Clinical Phenotypes</a></li>
+            <li><a href="#disease-course">Disease Course and Relapse Patterns</a></li>
+            <li><a href="#neuroimaging">Neuroimaging Characteristics</a></li>
+            <li><a href="#laboratory">Laboratory Findings</a></li>
+            <li><a href="#antibody-dynamics">MOG Antibody Dynamics</a></li>
+            <li><a href="#treatment">Treatment Approaches</a></li>
+            <li><a href="#prognosis">Prognostic Factors and Long-term Outcomes</a></li>
+            <li><a href="#differential">Differential Diagnosis</a></li>
+            <li><a href="#summary">Summary Tables</a></li>
+            <li><a href="#references">References</a></li>
+        </ol>
     </div>
 
-    <footer class="footer">
-        <p><strong>Pediatric MOGAD Clinical Course Review</strong></p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Comprehensive Evidence-Based Systematic Review from SCI-Indexed Journals</p>
-        <p style="margin-top: 1rem;">
+    <hr>
+
+    <h2 id="introduction">1. Introduction</h2>
+    <p>Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an autoimmune inflammatory demyelinating disorder of the central nervous system (CNS) that has been established as a distinct entity from multiple sclerosis (MS) and aquaporin-4-IgG neuromyelitis optica spectrum disorders (AQP4-NMOSD). MOGAD is characterized by immune-mediated demyelination primarily affecting the optic nerves, brain, and spinal cord.</p>
+
+    <h3>Key Distinguishing Features of Pediatric MOGAD</h3>
+    <ul>
+        <li>Age-dependent clinical phenotypes</li>
+        <li>Generally favorable long-term prognosis compared to AQP4-NMOSD</li>
+        <li>High response rates to immunotherapy</li>
+        <li>Variable disease course (monophasic vs. relapsing)</li>
+        <li>Unique neuroimaging patterns</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="epidemiology">2. Epidemiology</h2>
+
+    <h3>2.1 Incidence and Prevalence</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Overall prevalence</td><td>1.3-2.5 per 100,000</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>Annual incidence</td><td>3.4-4.8 per million</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>Pediatric proportion of all MOGAD</td><td>30-50%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>MOGAD among pediatric ADS cases</td><td>35-40%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/">PMID: 38290170</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>2.2 Demographic Characteristics</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Sex distribution</td><td>No female preponderance (unlike MS)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>Mean age at onset</td><td>7 years (range 2-16 years)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">PMID: 39778568</a></td></tr>
+            <tr><td>Median age at onset</td><td>6-8 years (varies by cohort)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37342342/">PMID: 37342342</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>2.3 Racial/Geographic Variations</h3>
+    <table>
+        <thead>
+            <tr><th>Population</th><th>Prevalence per 100,000</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Chinese</td><td>1.03</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>Malay</td><td>1.47</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>Indian</td><td>2.48</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="clinical-phenotypes">3. Clinical Phenotypes</h2>
+
+    <h3>3.1 Age-Dependent Presentation Patterns</h3>
+    <table>
+        <thead>
+            <tr><th>Age Group</th><th>Most Common Phenotype</th><th>Percentage</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>&lt;5 years</td><td>ADEM</td><td>81%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">PMID: 37789888</a></td></tr>
+            <tr><td>&lt;11 years</td><td>ADEM</td><td>38-66%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>&gt;11 years</td><td>Optic Neuritis</td><td>58% vs 24% in &lt;11y</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Adolescents</td><td>ON, TM</td><td>Similar to adults</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">PMID: 31582425</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.2 Clinical Phenotype Distribution in Pediatric Cohorts</h3>
+    <table>
+        <thead>
+            <tr><th>Phenotype</th><th>Frequency Range</th><th>Key Features</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>ADEM</strong></td><td>38-66%</td><td>Encephalopathy, multifocal neurological deficits, bilateral cerebral lesions</td></tr>
+            <tr><td><strong>Optic Neuritis (ON)</strong></td><td>17-40%</td><td>Often bilateral, severe VA loss at presentation, good recovery</td></tr>
+            <tr><td><strong>Transverse Myelitis (TM)</strong></td><td>1-26%</td><td>LETM pattern, H-sign on MRI, motor weakness</td></tr>
+            <tr><td><strong>Brainstem Syndrome</strong></td><td>5-15%</td><td>Cerebellar peduncle involvement, pontine lesions</td></tr>
+            <tr><td><strong>NMOSD-like</strong></td><td>Variable</td><td>ON+TM combination</td></tr>
+            <tr><td><strong>Cortical Encephalitis</strong></td><td>Rare</td><td>Seizures, FLAIR hyperintensity</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.3 ADEM Phenotype Details</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>MOG-Ab positivity in ADEM &lt;11y</td><td>~50%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Encephalopathy requirement</td><td>Mandatory for ADEM diagnosis</td><td>2023 MOGAD criteria</td></tr>
+            <tr><td>Bilateral involvement</td><td>Common</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+            <tr><td>Typical MRI pattern</td><td>Large, fluffy, poorly demarcated lesions</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.4 Optic Neuritis Characteristics in Pediatric MOGAD</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Bilateral involvement</td><td>More common than MS</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">PMID: 38217965</a></td></tr>
+            <tr><td>Disc swelling</td><td>Frequent</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Longitudinally extensive ON</td><td>Common</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Optic perineuritis</td><td>Characteristic feature</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Visual recovery</td><td>Excellent (all patients in some cohorts)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">PMID: 38217965</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.5 Transverse Myelitis Features</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Isolated TM at initial presentation</td><td>82% of TM cases</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Motor weakness</td><td>91%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Neurogenic bladder</td><td>63%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>LETM pattern</td><td>63%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>H-sign on axial MRI</td><td>30-63%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Complete MRI resolution at follow-up</td><td>50%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Spinal cord atrophy</td><td>Rare</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="disease-course">4. Disease Course and Relapse Patterns</h2>
+
+    <h3>4.1 Disease Course Distribution</h3>
+    <table>
+        <thead>
+            <tr><th>Course Type</th><th>Percentage</th><th>Follow-up Duration</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Monophasic</td><td>20-80%</td><td>Variable</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">[2]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">[19]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/">[20]</a></td></tr>
+            <tr><td>Relapsing</td><td>27-72%</td><td>Varies by FU length</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Relapsing (short FU 6-24 mo)</td><td>47%</td><td>6-24 months</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Relapsing (long FU &gt;5 years)</td><td>72%</td><td>&gt;5 years</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.2 Relapse Characteristics</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Median number of relapses</td><td>2 (range 1-8)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">PMID: 39778568</a></td></tr>
+            <tr><td>Time to first relapse (pediatric)</td><td>6 months</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Time to first relapse (adult)</td><td>17 months</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Early relapse (&lt;3 months)</td><td>34.9% of relapsing patients</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">PMID: 39778568</a></td></tr>
+            <tr><td>Median time to first relapse</td><td>9.5-13.7 months</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">[1]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">[19]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">[27]</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.3 Relapse Phenotype Patterns</h3>
+    <table>
+        <thead>
+            <tr><th>Finding</th><th>Description</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Phenotype evolution</td><td>Variable clinical presentations at relapse</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">PMC10187731</a></td></tr>
+            <tr><td>Most common relapse phenotype</td><td>Optic neuritis</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">PMID: 39778568</a></td></tr>
+            <tr><td>ON as relapse predictor</td><td>OR 5.175 (95% CI 1.286-20.824)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">PMC10277863</a></td></tr>
+            <tr><td>Same phenotype recurrence</td><td>Common but not universal</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/">[1]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">[19]</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.4 Late and Ultra-Late Relapses</h3>
+    <table>
+        <thead>
+            <tr><th>Category</th><th>Definition</th><th>Clinical Significance</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Late relapse</td><td>&gt;2 years after onset</td><td>Unpredictable timing</td></tr>
+            <tr><td>Ultra-late relapse</td><td>&gt;5 years after onset</td><td>Requires extended follow-up</td></tr>
+            <tr><td>Relapse risk trajectory</td><td>Higher in first few months post-attack</td><td>Supports extended steroid taper</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="neuroimaging">5. Neuroimaging Characteristics</h2>
+
+    <h3>5.1 Brain MRI Findings</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Frequency</th><th>Significance</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Frontal involvement</td><td>70.5%</td><td>Common location</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Subcortical white matter</td><td>75%</td><td>Characteristic</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Thalamic involvement</td><td>47.7%</td><td>Differentiates from MS</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Pontine involvement</td><td>47.7%</td><td>Common in children</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Cerebellar peduncle lesions</td><td>Present</td><td>Pediatric feature</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>"Leukodystrophy-like" pattern</td><td>Variable</td><td>Large confluent WM lesions</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>5.2 ADEM-Specific MRI Features</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Description</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Lesion size</td><td>Large (&gt;2 cm), fluffy, poorly demarcated</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+            <tr><td>Distribution</td><td>Bilateral supratentorial (subcortical + deep WM + DGM)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+            <tr><td>Small WM lesions (atypical)</td><td>31% of ADEM</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+            <tr><td>Subcortical lesions (atypical)</td><td>44%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+            <tr><td>Atypical features overall</td><td>62% had at least 1 atypical finding</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">PMC9163708</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>5.3 Enhancement Patterns</h3>
+    <table>
+        <thead>
+            <tr><th>Type</th><th>Frequency</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Leptomeningeal enhancement</td><td>36%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Parenchymal enhancement</td><td>34%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">PMC8561692</a></td></tr>
+            <tr><td>Spinal root enhancement</td><td>43% (in TM)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>5.4 Optic Nerve MRI Features</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Description</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Longitudinally extensive involvement</td><td>Common</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Optic perineuritis</td><td>Characteristic of MOGAD</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Anterior optic nerve involvement</td><td>More common than chiasm</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td>Bilateral involvement</td><td>Frequent</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>5.5 Spinal Cord MRI Features</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>Frequency/Description</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>LETM (at least 3 segments)</td><td>63%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>H-sign (gray matter restricted)</td><td>30-63%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Complete resolution at FU</td><td>50-79%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Spinal cord atrophy</td><td>Rare</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="laboratory">6. Laboratory Findings</h2>
+
+    <h3>6.1 Cerebrospinal Fluid (CSF) Analysis</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>CSF pleocytosis</td><td>44-85% (more common in children)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">PMC6469662</a></td></tr>
+            <tr><td>Median WCC (if elevated)</td><td>40 cells/uL (range 6-256)</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>WCC &gt;100/uL</td><td>11%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Predominant cell type</td><td>Lymphocytes and monocytes</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Neutrophils present</td><td>71%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Elevated CSF protein</td><td>~33%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">PMC6469662</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>6.2 Oligoclonal Bands (OCB)</h3>
+    <table>
+        <thead>
+            <tr><th>Finding</th><th>Percentage</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>OCB positive</td><td>6-17%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">PMC6469662</a></td></tr>
+            <tr><td>OCB negative</td><td>89%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Pattern 2 (CSF-restricted)</td><td>7.3%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Pattern 3</td><td>4.2%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>MRZ reaction positive</td><td>0%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>6.3 Blood-CSF Barrier Function</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Barrier dysfunction</td><td>46% of samples</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+            <tr><td>Patients with dysfunction (at least 1 LP)</td><td>48%</td><td><a href="https://doi.org/10.1186/s12974-020-01825-1">J Neuroinflammation 2020</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>6.4 Comparison with MS and NMOSD</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>MOGAD</th><th>MS</th><th>NMOSD</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>OCB positive</td><td>6-17%</td><td>&gt;90%</td><td>10-16%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">PMC6469662</a></td></tr>
+            <tr><td>Neutrophil ratio</td><td>Higher</td><td>Lower</td><td>Variable</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10523388/">PMC10523388</a></td></tr>
+            <tr><td>IgG index</td><td>Lower</td><td>Higher</td><td>Variable</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10523388/">PMC10523388</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="antibody-dynamics">7. MOG Antibody Dynamics</h2>
+
+    <h3>7.1 Antibody Persistence and Prognosis</h3>
+    <table>
+        <thead>
+            <tr><th>Serostatus</th><th>Relapse Risk</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Persistent seropositivity</td><td>2-10x higher relapse risk</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">[5]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">[25]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">[27]</a></td></tr>
+            <tr><td>Seroconversion to negative</td><td>Lower relapse risk</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">[5]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">[25]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">[27]</a></td></tr>
+            <tr><td>High titer persistence</td><td>Associated with relapse</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>7.2 Titer Dynamics</h3>
+    <table>
+        <thead>
+            <tr><th>Observation</th><th>Significance</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Titer decline in monophasic</td><td>Most prominent in first 12 months</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+            <tr><td>Stable/rising titers</td><td>Associated with relapsing course</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+            <tr><td>Seroconversion &lt;1:160 in 24 mo</td><td>High PPV for monophasic course</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>7.3 Antibody Persistence Statistics</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Median duration of persistence</td><td>6 months (IQR 3-6, range 2-36)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">PMC10277863</a></td></tr>
+            <tr><td>Patients remaining seropositive</td><td>&gt;50%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">[25]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">[26]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">[27]</a></td></tr>
+            <tr><td>Higher titer in patients with sequelae</td><td>Median 1:100 vs 1:32</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">PMC10277863</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="treatment">8. Treatment Approaches</h2>
+
+    <h3>8.1 Acute Phase Treatment</h3>
+    <table>
+        <thead>
+            <tr><th>Treatment</th><th>Use</th><th>Evidence</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>IV Methylprednisolone</td><td>First-line</td><td>Good response in most</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342853/">PMC6342853</a></td></tr>
+            <tr><td>IVIG</td><td>Second-line or add-on</td><td>Effective for steroid-refractory</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342853/">PMC6342853</a></td></tr>
+            <tr><td>Plasma Exchange (PLEX)</td><td>Severe/refractory cases</td><td>Variable response</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342853/">PMC6342853</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>8.2 Corticosteroid Taper Recommendations</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Recommendation</th><th>Evidence Level</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Minimum duration</td><td>at least 5 weeks</td><td>OR 0.15 for relapse</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Suggested maximum</td><td>3 months</td><td>EU Pediatric Consensus</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Optimal pediatric dose</td><td>0.16 mg/kg/day prednisone</td><td>88% relapse risk reduction</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38744459/">PMID: 38744459</a></td></tr>
+            <tr><td>Adult equivalent dose</td><td>12.5 mg/day prednisone</td><td>88% relapse risk reduction</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38744459/">PMID: 38744459</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>8.3 Maintenance Therapy Options</h3>
+    <table>
+        <thead>
+            <tr><th>Treatment</th><th>Efficacy Data</th><th>Pediatric Preference</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>IVIG (monthly)</strong></td><td>ARR 2.16 to 0.51; 33% relapse on Rx</td><td>First choice (45.5%)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+            <tr><td><strong>Rituximab</strong></td><td>52.5-70% relapse-free at 12 mo</td><td>Variable</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/">PMID: 32629363</a></td></tr>
+            <tr><td><strong>Mycophenolate mofetil</strong></td><td>Reduces ARR (P&lt;0.05)</td><td>Used</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/34856664/">PMID: 34856664</a></td></tr>
+            <tr><td><strong>Azathioprine</strong></td><td>Reduces ARR (P&lt;0.05)</td><td>Less preferred vs adults</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/34856664/">PMID: 34856664</a></td></tr>
+            <tr><td><strong>Tocilizumab</strong></td><td>Emerging evidence</td><td>Higher pediatric preference</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>8.4 IVIG Evidence in Pediatric MOGAD</h3>
+    <table>
+        <thead>
+            <tr><th>Finding</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>ARR reduction</td><td>2.16 to 0.51</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+            <tr><td>Relapse rate on IVIG</td><td>33.3% (4/12)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+            <tr><td>Comparison to other agents</td><td>Lower relapse rate than AZA, MMF, RTX</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>8.5 Rituximab Evidence</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Pediatric patients in study</td><td>30/121 (24.8%)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/">PMID: 32629363</a></td></tr>
+            <tr><td>Relapse-free after 1 attack</td><td>70% at 11.2 months</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/">PMID: 32629363</a></td></tr>
+            <tr><td>Relapse-free after at least 2 attacks</td><td>52.5% at 12.1 months</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/">PMID: 32629363</a></td></tr>
+            <tr><td>Breakthrough relapses</td><td>Reported despite B-cell depletion</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/">PMID: 32629363</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>8.6 Early Treatment Impact</h3>
+    <table>
+        <thead>
+            <tr><th>Factor</th><th>Effect Size</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Immunotherapy &lt;7 days</td><td>6.7-fold reduced odds of relapse</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Corticosteroid at least 5 weeks</td><td>6.7-fold reduced odds of relapse</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Optic nerve involvement on MRI</td><td>12.5-fold reduced odds of relapse</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="prognosis">9. Prognostic Factors and Long-term Outcomes</h2>
+
+    <h3>9.1 Long-term Disability Outcomes</h3>
+    <table>
+        <thead>
+            <tr><th>Metric</th><th>MOGAD</th><th>AQP4-NMOSD (comparison)</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>EDSS at least 6 at 14-year FU</td><td>7%</td><td>30%</td><td><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2770029">JAMA Neurol 2020</a></td></tr>
+            <tr><td>Unilateral blindness at FU</td><td>7%</td><td>65%</td><td><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2770029">JAMA Neurol 2020</a></td></tr>
+            <tr><td>Moderate-severe deficits</td><td>15% at 42 months</td><td>Higher</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/">PMC7489431</a></td></tr>
+            <tr><td>Sequelae rate</td><td>58% at 61 months</td><td>N/A</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/">PMC7489431</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.2 Visual Outcomes</h3>
+    <table>
+        <thead>
+            <tr><th>Outcome</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Complete visual recovery</td><td>All patients in some cohorts</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">PMID: 38217965</a></td></tr>
+            <tr><td>Recovery independent of relapses</td><td>Yes</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">PMID: 38217965</a></td></tr>
+            <tr><td>pRNFL thickness</td><td>Decreased, stabilizes at 12 months</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">PMID: 38217965</a></td></tr>
+            <tr><td>5-year visual outcome</td><td>As good as MS, better than AQP4-NMOSD</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/34461572/">PMID: 34461572</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.3 Motor Outcomes (TM)</h3>
+    <table>
+        <thead>
+            <tr><th>Outcome</th><th>Finding</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Better than wheelchair at nadir</td><td>80%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Relapse rate at 28-month FU</td><td>29%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Spinal cord lesion resolution</td><td>50% complete</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td>Spinal cord atrophy</td><td>None</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.4 Cognitive Outcomes</h3>
+    <table>
+        <thead>
+            <tr><th>Finding</th><th>Percentage</th><th>Population</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Cognitive problems overall</td><td>10-50%</td><td>All pediatric MOGAD</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Cognitive problems in relapsing</td><td>20%</td><td>102 children</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td>Cognitive problems in MDEM</td><td>50%</td><td>Multiphasic course</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td>Academic intervention required</td><td>39.5%</td><td>51 patients</td><td><a href="https://onlinelibrary.wiley.com/doi/10.1111/dmcn.16093">Dev Med Child Neurol 2025</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.5 Cognitive Domains Affected</h3>
+    <table>
+        <thead>
+            <tr><th>Domain</th><th>Status</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Intellectual functioning</td><td>Impaired in some</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td>Memory</td><td>Impaired</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Processing speed</td><td>Impaired</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Working memory</td><td>Impaired</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Reasoning skills</td><td>Reduced vs controls</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+            <tr><td>Response time</td><td>Slower vs controls</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/">PMID: 35183817</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.6 Prognostic Factors</h3>
+    <table>
+        <thead>
+            <tr><th>Factor</th><th>Association</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="3"><strong>Positive prognostic factors</strong></td></tr>
+            <tr><td>Optic nerve involvement</td><td>Better outcome</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/">PMC7489431</a></td></tr>
+            <tr><td>Early immunotherapy (&lt;7 days)</td><td>Lower relapse risk</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Longer steroid taper (at least 5 weeks)</td><td>Lower relapse risk</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Seroconversion to negative</td><td>Lower relapse risk</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+            <tr><td>Monophasic course</td><td>Better cognitive outcome</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td colspan="3"><strong>Negative prognostic factors</strong></td></tr>
+            <tr><td>Spinal cord involvement</td><td>Worse outcome</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/">PMC7489431</a></td></tr>
+            <tr><td>MDEM phenotype</td><td>Higher cognitive problems</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td>Persistent seropositivity</td><td>Higher relapse risk</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/">PMC10338689</a></td></tr>
+            <tr><td>Higher MOG-Ab titer</td><td>More sequelae</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/">PMC10277863</a></td></tr>
+            <tr><td>Increased opening pressure</td><td>Longer hospital stay, more morbidity</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37918972/">PMID: 37918972</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.7 Disease Course vs Outcome</h3>
+    <table>
+        <thead>
+            <tr><th>Course</th><th>Recovery Rate</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Monophasic</td><td>Higher (specific % varies)</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+            <tr><td>Multiphasic/Relapsing</td><td>31-50% full recovery</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/">PMC11875521</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="differential">10. Differential Diagnosis</h2>
+
+    <h3>10.1 MOGAD vs MS vs NMOSD: Key Differentiators</h3>
+    <table>
+        <thead>
+            <tr><th>Feature</th><th>MOGAD</th><th>MS</th><th>AQP4-NMOSD</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="5"><strong>Epidemiology</strong></td></tr>
+            <tr><td>Female predominance</td><td>No</td><td>Yes</td><td>Yes</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">[2]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">[26]</a></td></tr>
+            <tr><td>Peak pediatric age</td><td>&lt;11 years</td><td>Adolescence</td><td>Variable</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">[2]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/37342342/">[7]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/">[19]</a></td></tr>
+            <tr><td colspan="5"><strong>Clinical</strong></td></tr>
+            <tr><td>ADEM phenotype</td><td>Common (&lt;11y)</td><td>Rare</td><td>Rare</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/">[2]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">[24]</a></td></tr>
+            <tr><td>Bilateral ON</td><td>Common</td><td>Rare</td><td>Common</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/">[9]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">[26]</a></td></tr>
+            <tr><td>Chiasmal involvement</td><td>Less common</td><td>Rare</td><td>Common</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38783085/">PMID: 38783085</a></td></tr>
+            <tr><td colspan="5"><strong>Laboratory</strong></td></tr>
+            <tr><td>OCB positive</td><td>6-17%</td><td>&gt;90%</td><td>10-16%</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">PMC6469662</a></td></tr>
+            <tr><td>Specific antibody</td><td>MOG-IgG</td><td>None</td><td>AQP4-IgG</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38870448/">[3]</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">[26]</a></td></tr>
+            <tr><td colspan="5"><strong>MRI</strong></td></tr>
+            <tr><td>Lesion pattern</td><td>Large, fluffy</td><td>Small, ovoid</td><td>LETM, area postrema</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">[23]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/">[24]</a></td></tr>
+            <tr><td>Dawson fingers</td><td>Absent</td><td>Present</td><td>Absent</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/31582425/">[13]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/">[23]</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/">[26]</a></td></tr>
+            <tr><td>H-sign in cord</td><td>Present</td><td>Absent</td><td>Absent</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/">PMID: 37060644</a></td></tr>
+            <tr><td colspan="5"><strong>Prognosis</strong></td></tr>
+            <tr><td>Long-term disability</td><td>Low</td><td>Moderate</td><td>High</td><td><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2770029">JAMA Neurol 2020</a></td></tr>
+            <tr><td>Secondary progression</td><td>No</td><td>Yes</td><td>No</td><td><a href="https://jamanetwork.com/journals/jamaneurology/fullarticle/2770029">JAMA Neurol 2020</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>10.2 Age-Specific Considerations</h3>
+    <table>
+        <thead>
+            <tr><th>Age Group</th><th>MOGAD Likelihood</th><th>Recommended Testing</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>&lt;5 years with ADEM</td><td>Very high (~81%)</td><td>MOG-Ab mandatory</td></tr>
+            <tr><td>&lt;11 years with ADS</td><td>High (&gt;50%)</td><td>MOG-Ab recommended</td></tr>
+            <tr><td>Adolescent with ON</td><td>Moderate</td><td>MOG-Ab + AQP4-Ab</td></tr>
+            <tr><td>Any age with bilateral ON</td><td>High</td><td>MOG-Ab priority</td></tr>
+        </tbody>
+    </table>
+
+    <h3>10.3 2023 MOGAD Diagnostic Criteria Performance in Children</h3>
+    <table>
+        <thead>
+            <tr><th>Metric</th><th>Value</th><th>Reference</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Sensitivity</td><td>100%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/">PMID: 38290170</a></td></tr>
+            <tr><td>Specificity</td><td>100%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/">PMID: 38290170</a></td></tr>
+            <tr><td>PPV</td><td>100%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/">PMID: 38290170</a></td></tr>
+            <tr><td>NPV</td><td>100%</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/">PMID: 38290170</a></td></tr>
+            <tr><td>Definite MOGAD diagnosis rate</td><td>96.9% (205/209 children)</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/39849443/">PMID: 39849443</a></td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="summary">11. Summary Tables</h2>
+
+    <h3>11.1 Key Pediatric MOGAD Statistics at a Glance</h3>
+    <table>
+        <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Evidence Level</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Prevalence</td><td>1.3-2.5/100,000</td><td>Moderate</td></tr>
+            <tr><td>Pediatric proportion</td><td>30-50%</td><td>High</td></tr>
+            <tr><td>Mean onset age</td><td>6-8 years</td><td>High</td></tr>
+            <tr><td>Most common phenotype &lt;5y</td><td>ADEM (81%)</td><td>High</td></tr>
+            <tr><td>Relapse rate (long FU)</td><td>50-72%</td><td>High</td></tr>
+            <tr><td>Good visual recovery</td><td>&gt;95%</td><td>High</td></tr>
+            <tr><td>Cognitive impairment</td><td>10-50%</td><td>Moderate</td></tr>
+            <tr><td>EDSS at least 6 at long-term FU</td><td>7%</td><td>Moderate</td></tr>
+        </tbody>
+    </table>
+
+    <h3>11.2 Treatment Algorithm Summary</h3>
+    <table>
+        <thead>
+            <tr><th>Phase</th><th>First-Line</th><th>Second-Line</th><th>Evidence</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Acute attack</td><td>IV methylprednisolone</td><td>IVIG or PLEX</td><td>Consensus</td></tr>
+            <tr><td>Post-acute</td><td>Oral steroid taper at least 5 weeks</td><td>Extended 3 months</td><td><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/">PMID: 36446614</a></td></tr>
+            <tr><td>Maintenance (relapsing)</td><td>Monthly IVIG</td><td>RTX, MMF, AZA</td><td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/">PMC7954658</a></td></tr>
+        </tbody>
+    </table>
+
+    <h3>11.3 Red Flags Requiring Extended Follow-up</h3>
+    <table>
+        <thead>
+            <tr><th>Finding</th><th>Implication</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Persistent high MOG-Ab titer</td><td>Higher relapse risk</td></tr>
+            <tr><td>MDEM phenotype</td><td>Higher cognitive sequelae risk</td></tr>
+            <tr><td>Spinal cord involvement</td><td>Higher motor disability risk</td></tr>
+            <tr><td>Incomplete steroid taper</td><td>Higher relapse risk</td></tr>
+            <tr><td>Late (&gt;2 year) relapse</td><td>Unpredictable disease course</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2 id="references">12. References</h2>
+
+    <h3>Primary Literature (with PMIDs)</h3>
+    <ol>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/39778568/"><strong>PMID: 39778568</strong></a> - Phenotype of Relapsing Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease in Children. <em>J Clin Neurol.</em> 2025.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37789888/"><strong>PMID: 37789888</strong></a> - Epidemiology of myelin oligodendrocyte glycoprotein antibody-associated disease: a review of prevalence and incidence worldwide. <em>Front Neurol.</em> 2023.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38870448/"><strong>PMID: 38870448</strong></a> - Validation of the 2023 International Diagnostic Criteria for MOGAD in a Selected Cohort of Adults and Children. <em>Neurology.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38290170/"><strong>PMID: 38290170</strong></a> - Validation of the 2023 international diagnostic criteria for MOGAD in a pediatric cohort. <em>Eur J Paediatr Neurol.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/36446614/"><strong>PMID: 36446614</strong></a> - Early Immunotherapy and Longer Corticosteroid Treatment Are Associated With Lower Risk of Relapsing Disease Course in Pediatric MOGAD. <em>Neurol Neuroimmunol Neuroinflamm.</em> 2023;10(1):e200065.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38744459/"><strong>PMID: 38744459</strong></a> - Oral corticosteroid dosage and taper duration at onset in myelin oligodendrocyte glycoprotein antibody-associated disease influences time to first relapse. <em>J Neurol Neurosurg Psychiatry.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37342342/"><strong>PMID: 37342342</strong></a> - Pediatric myelin oligodendrocyte glycoprotein antibody-associated disease in southern China: analysis of 93 cases. <em>Front Neurol.</em> 2023.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37060644/"><strong>PMID: 37060644</strong></a> - Clinical and Radiologic Features Among Children With Myelin Oligodendrocyte Glycoprotein Antibody-Associated Myelitis. <em>Neurology.</em> 2023.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38217965/"><strong>PMID: 38217965</strong></a> - Visual outcome measures in pediatric myelin oligodendrocyte glycoprotein antibody-associated disease (MOGAD). <em>J AAPOS.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/34461572/"><strong>PMID: 34461572</strong></a> - Five-year visual outcomes after optic neuritis in anti-MOG antibody-associated disease. <em>Ann Clin Transl Neurol.</em> 2021.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/35183817/"><strong>PMID: 35183817</strong></a> - Cognitive function in pediatric-onset relapsing myelin oligodendrocyte glycoprotein antibody-associated disease (MOGAD). <em>Mult Scler Relat Disord.</em> 2022.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/32629363/"><strong>PMID: 32629363</strong></a> - Treatment of MOG-IgG-associated disorder with rituximab: An international study of 121 patients. <em>Neurol Neuroimmunol Neuroinflamm.</em> 2020.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/31582425/"><strong>PMID: 31582425</strong></a> - CNS inflammatory demyelinating disorders: MS, NMOSD and MOG antibody associated disease. <em>J Neurol.</em> 2019.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37918972/"><strong>PMID: 37918972</strong></a> - Increased Intracranial Pressure in Pediatric Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease. <em>Pediatr Neurol.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38447115/"><strong>PMID: 38447115</strong></a> - MOG Antibodies Restricted to CSF in Children With Inflammatory CNS Disorders. <em>Neurology.</em> 2024.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/34856664/"><strong>PMID: 34856664</strong></a> - Clinical follow-up study of myelin oligodendrocyte glycoprotein antibody-associated disease in children. <em>Zhonghua Er Ke Za Zhi.</em> 2021 (Chinese).</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/39849443/"><strong>PMID: 39849443</strong></a> - Performance of the 2023 diagnostic criteria for MOGAD: real-world application in a Chinese multicenter cohort of pediatric and adult patients. <em>BMC Med.</em> 2025.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38364768/"><strong>PMID: 38364768</strong></a> - Clinical analysis of myelin oligodendrocyte glycoprotein antibody-associated disease in a diverse cohort of children. <em>Mult Scler Relat Disord.</em> 2024.</li>
+    </ol>
+
+    <h3>Key Review Articles (PMC)</h3>
+    <ol start="19">
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10187731/"><strong>PMC10187731</strong></a> - Attack phenotypes and disease course in pediatric MOGAD. <em>Front Neurol.</em> 2023.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7489431/"><strong>PMC7489431</strong></a> - Long-term Outcomes in Patients With Myelin Oligodendrocyte Glycoprotein Immunoglobulin G-Associated Disorder. <em>JAMA Neurol.</em> 2020.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6342853/"><strong>PMC6342853</strong></a> - Treatment Approaches for MOG-Ab-Associated Demyelination in Children. <em>Front Neurol.</em> 2019.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7954658/"><strong>PMC7954658</strong></a> - Treatment of MOG antibody associated disorders: results of an international survey. <em>J Neurol.</em> 2021.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8561692/"><strong>PMC8561692</strong></a> - Clinical and neuroimaging findings in MOGAD-MRI and OCT. <em>Clin Exp Neuroimmunol.</em> 2021.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9163708/"><strong>PMC9163708</strong></a> - Clinical and Magnetic Resonance Imaging Characteristics of Pediatric Acute Disseminating Encephalomyelitis With and Without Antibodies to Myelin Oligodendrocyte Glycoprotein. <em>Front Pediatr.</em> 2022.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10338689/"><strong>PMC10338689</strong></a> - Serum MOG IgG titres should be performed routinely in the diagnosis and follow-up of MOGAD. <em>J Neurol Neurosurg Psychiatry.</em> 2023.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6469662/"><strong>PMC6469662</strong></a> - Neurological update: MOG antibody disease. <em>J Neurol.</em> 2019.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10277863/"><strong>PMC10277863</strong></a> - Pediatric myelin oligodendrocyte glycoprotein antibody-associated disease in southern China. <em>Front Neurol.</em> 2023.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10523388/"><strong>PMC10523388</strong></a> - A retrospective study of myelin oligodendrocyte glycoprotein antibody-associated disease from a clinical laboratory perspective. <em>Front Neurol.</em> 2023.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/"><strong>PMC11875521</strong></a> - Cognitive and academic outcomes in children with myelin oligodendrocyte glycoprotein antibody-associated disease. <em>Dev Med Child Neurol.</em> 2025.</li>
+        <li><a href="https://doi.org/10.1186/s12974-020-01825-1"><strong>J Neuroinflammation 2020</strong></a> - Cerebrospinal fluid findings in patients with myelin oligodendrocyte glycoprotein (MOG) antibodies. Part 2: Results from 108 lumbar punctures in 80 pediatric patients. <em>J Neuroinflammation.</em> 2020;17:262.</li>
+    </ol>
+
+    <hr>
+
+    <h2>Appendix: Evidence Quality Assessment</h2>
+    <table>
+        <thead>
+            <tr><th>Topic Area</th><th>Number of Studies</th><th>Evidence Quality</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Epidemiology</td><td>5+</td><td>Moderate-High</td></tr>
+            <tr><td>Clinical Phenotypes</td><td>15+</td><td>High</td></tr>
+            <tr><td>Relapse Patterns</td><td>10+</td><td>High</td></tr>
+            <tr><td>Neuroimaging</td><td>8+</td><td>High</td></tr>
+            <tr><td>CSF Findings</td><td>5+</td><td>Moderate</td></tr>
+            <tr><td>Treatment</td><td>10+</td><td>Moderate</td></tr>
+            <tr><td>Long-term Outcomes</td><td>8+</td><td>Moderate</td></tr>
+            <tr><td>Cognitive Outcomes</td><td>5+</td><td>Emerging</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <div class="qr-section">
+        <h3>Access This Review</h3>
+        <p>Scan QR code to access this page on mobile</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://ykshim2013.github.io/pediatric-mogad-review/" alt="QR Code" class="qr-code">
+        <p><a href="https://ykshim2013.github.io/pediatric-mogad-review/">https://ykshim2013.github.io/pediatric-mogad-review/</a></p>
+        <div style="margin-top: 16px;">
+            <a href="https://github.com/ykshim2013/pediatric-mogad-review" class="btn">View on GitHub</a>
+            <a href="https://github.com/ykshim2013/pediatric-mogad-review/blob/main/Comprehensive_Pediatric_MOGAD_Clinical_Course_Review.md" class="btn btn-outline">View Markdown Source</a>
+        </div>
+    </div>
+
+    <footer>
+        <p><em>Document compiled from SCI-indexed journals with verified PMIDs</em></p>
+        <p><em>Last updated: January 2025</em></p>
+        <p><em>For research and clinical reference purposes</em></p>
+        <p style="margin-top: 16px;">
             <a href="https://github.com/ykshim2013/pediatric-mogad-review">GitHub Repository</a> |
             <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 License</a>
         </p>
-        <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.7;">Last Updated: January 2025</p>
     </footer>
 </body>
 </html>
