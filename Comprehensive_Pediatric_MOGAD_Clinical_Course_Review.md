@@ -150,11 +150,61 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 
 ### 4.4 Late and Ultra-Late Relapses
 
-| Category | Definition | Clinical Significance |
-|----------|------------|----------------------|
-| Late relapse | >2 years after onset | Unpredictable timing |
-| Ultra-late relapse | >5 years after onset | Requires extended follow-up |
-| Relapse risk trajectory | Higher in first few months post-attack | Supports extended steroid taper |
+| Category | Definition | Frequency | Reference |
+|----------|------------|-----------|-----------|
+| First relapse within 1 year | <12 months from onset | 68.6% | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| Late relapse | >2 years after onset | Variable | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+| Ultra-late relapse (≥5 years) | ≥5 years after onset | 19.6% of relapsing patients | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| Relapse >10 years after onset | >10 years from disease onset | 61.5% (8/13 with >10y FU) | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+
+### 4.5 Annualized Relapse Rate (ARR) Trajectory
+
+| Time Period | ARR in MOGAD | ARR in AQP4-NMOSD | Significance | Reference |
+|-------------|--------------|-------------------|--------------|-----------|
+| First 5 years | 0.19 | 0.30 | p = 0.0753 | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+| After 5 years | 0.05 | 0.34 | p = 0.0001 | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+| Reduction after 5 years | 72% decrease | No significant change | p = 0.0090 | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+
+### 4.6 Early Relapse Definitions and Prognosis
+
+| Relapse Type | Definition | Long-term Relapse Risk | Reference |
+|--------------|------------|------------------------|-----------|
+| Very early relapse | 30-90 days from onset | HR 2.70, p < 0.001 | [PMID: 37394961](https://pubmed.ncbi.nlm.nih.gov/37394961/) |
+| Delayed early relapse | 90-365 days from onset | HR 1.88, p = 0.001 | [PMID: 37394961](https://pubmed.ncbi.nlm.nih.gov/37394961/) |
+| Any early relapse | Within 12 months | HR 2.11, p < 0.001 | [PMID: 37394961](https://pubmed.ncbi.nlm.nih.gov/37394961/) |
+| Pediatric early relapse (<12y) | Delayed early only | HR 2.64, p = 0.026 | [PMID: 37394961](https://pubmed.ncbi.nlm.nih.gov/37394961/) |
+
+### 4.7 Clinical Significance of Late Relapses
+
+| Finding | Clinical Implication | Reference |
+|---------|---------------------|-----------|
+| Ultra-late relapses occur in ~20% | Extended monitoring beyond 5 years recommended | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| Relapses >10 years not rare | Lifelong vigilance may be needed | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+| ARR decreases significantly after 5 years | Lower but persistent risk in chronic phase | [PMID: 34820735](https://pubmed.ncbi.nlm.nih.gov/34820735/) |
+| Younger age = longer time to relapse | Pediatric patients may relapse later | [PMID: 38964848](https://pubmed.ncbi.nlm.nih.gov/38964848/) |
+| Early relapses predict long-term course | Risk stratification possible | [PMID: 37394961](https://pubmed.ncbi.nlm.nih.gov/37394961/) |
+
+### 4.8 Relapse Risk Factors
+
+| Risk Factor | Effect Size | Reference |
+|-------------|-------------|-----------|
+| Female sex | HR 1.66 (95% CI 1.17-2.36), p = 0.004 | [PMID: 38964848](https://pubmed.ncbi.nlm.nih.gov/38964848/) |
+| Hispanic/Latino ethnicity | HR 1.77 (95% CI 1.19-2.64), p = 0.005 | [PMID: 38964848](https://pubmed.ncbi.nlm.nih.gov/38964848/) |
+| Pediatric onset <9 years | HR 2.69, p = 0.035 | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| CSF pleocytosis >150 cells/mm³ | HR 3.3, p = 0.023 | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| Meningoencephalitis at onset | Increased risk | [PMID: 38749350](https://pubmed.ncbi.nlm.nih.gov/38749350/) |
+| ADEM phenotype | Increased risk, p = 0.039 | [PMID: 38964848](https://pubmed.ncbi.nlm.nih.gov/38964848/) |
+
+### 4.9 Protective Factors Against Relapse
+
+| Protective Factor | Effect Size | Reference |
+|-------------------|-------------|-----------|
+| Immunotherapy <7 days from onset | OR 0.15 (6.7-fold reduced odds), p = 0.009 | [PMID: 36446614](https://pubmed.ncbi.nlm.nih.gov/36446614/) |
+| Corticosteroid ≥5 weeks | OR 0.15 (6.7-fold reduced odds), p = 0.026 | [PMID: 36446614](https://pubmed.ncbi.nlm.nih.gov/36446614/) |
+| Optic nerve involvement on MRI | OR 0.08 (12.5-fold reduced odds), p = 0.007 | [PMID: 36446614](https://pubmed.ncbi.nlm.nih.gov/36446614/) |
+| Rituximab/IVIG after first event | Reduced risk of second event | [PMID: 38964848](https://pubmed.ncbi.nlm.nih.gov/38964848/) |
+| Male sex with >1 month steroids | Lower risk of relapsing disease | [PMID: 34848526](https://pubmed.ncbi.nlm.nih.gov/34848526/) |
+| MOG-Ab seroconversion to negative | ~45% seroconvert; lower relapse risk | [PMID: 34848526](https://pubmed.ncbi.nlm.nih.gov/34848526/) |
 
 ---
 
@@ -553,6 +603,18 @@ Myelin Oligodendrocyte Glycoprotein Antibody-Associated Disease (MOGAD) is an au
 29. [**PMC11875521**](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11875521/) - Cognitive and academic outcomes in children with myelin oligodendrocyte glycoprotein antibody-associated disease. *Dev Med Child Neurol.* 2025.
 
 30. [**J Neuroinflammation 2020**](https://doi.org/10.1186/s12974-020-01825-1) - Cerebrospinal fluid findings in patients with myelin oligodendrocyte glycoprotein (MOG) antibodies. Part 2: Results from 108 lumbar punctures in 80 pediatric patients. *J Neuroinflammation.* 2020;17:262.
+
+### Late and Ultra-Late Relapse Studies
+
+31. [**PMID: 38749350**](https://pubmed.ncbi.nlm.nih.gov/38749350/) - Frequency, characteristics, and predictors of a relapsing course in myelin oligodendrocyte glycoprotein antibody-associated disease (MOGAD). *J Neurol.* 2024;271(6):3448-3459.
+
+32. [**PMID: 34820735**](https://pubmed.ncbi.nlm.nih.gov/34820735/) - Chronic relapsing inflammatory optic neuropathy (CRION) and relapsing MOG-antibody-associated disease: Chronic phase activity and predictors. *Mult Scler Relat Disord.* 2022;57:103437.
+
+33. [**PMID: 37394961**](https://pubmed.ncbi.nlm.nih.gov/37394961/) - Early relapses in myelin oligodendrocyte glycoprotein antibody-associated disease: A multinational cohort study. *Neurology.* 2023;101(11):e1125-e1136.
+
+34. [**PMID: 38964848**](https://pubmed.ncbi.nlm.nih.gov/38964848/) - Predictors of a relapsing course in myelin oligodendrocyte glycoprotein antibody-associated disease: A systematic review and meta-analysis. *J Neurol Sci.* 2024;462:123073.
+
+35. [**PMID: 34848526**](https://pubmed.ncbi.nlm.nih.gov/34848526/) - Predictors of relapse and long-term outcomes in myelin oligodendrocyte glycoprotein antibody-associated disease (MOGAD): A UK cohort study. *Eur J Neurol.* 2022;29(4):1024-1035.
 
 ---
 
